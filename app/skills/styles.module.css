@@ -1,0 +1,21 @@
+.orbitContainer {
+  animation: orbit 25s linear infinite; /* Animation to rotate the circular div */
+}
+
+.orbitIcon {
+  position: absolute;
+  width: 80px; /* Adjust the size of the icons */
+  height: 80px; /* Adjust the size of the icons */
+  background-color: #3498db; /* Background color of the icons */
+  border-radius: 50%; /* Makes the icons circular */
+  border: 2px solid #000; /* Add border around the icons */
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
