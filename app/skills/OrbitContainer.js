@@ -31,7 +31,7 @@ export default function OrbitContainer() {
 
   return (
     <div
-      className={`relative  aspect-square h-4/6 animate-[spin_60s_linear_infinite] rounded-full`}
+      className={`relative  aspect-square h-5/6 animate-[spin_60s_linear_infinite] rounded-full`}
       ref={orbitContainer}
     >
       {/* Condition ensures icons are only rendered after the container has been rendered and width calculated */}
