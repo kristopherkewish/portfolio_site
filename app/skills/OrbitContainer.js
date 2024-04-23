@@ -4,7 +4,7 @@ import { createIcons } from "./createIcons.js";
 import { useEffect, useRef, useState } from "react";
 import OrbitIcon from "./OrbitIcon.js";
 
-export default function OrbitContainer({ numIcons }) {
+export default function OrbitContainer() {
   const orbitContainer = useRef(0);
   const [orbitContainerRadius, setOrbitContainerRadius] = useState(0);
 
@@ -31,18 +31,19 @@ export default function OrbitContainer({ numIcons }) {
 
   return (
     <div
-      className={`relative  aspect-square h-4/6 animate-[spin_30s_linear_infinite] rounded-full border-2 border-dashed border-indigo-600 bg-gray-200`}
+      className={`relative  aspect-square h-4/6 animate-[spin_60s_linear_infinite] rounded-full`}
       ref={orbitContainer}
     >
       {/* Condition ensures icons are only rendered after the container has been rendered and width calculated */}
       {orbitContainerRadius !== 0 &&
-        createIcons(orbitContainerRadius, numIcons).map((icon, index) => {
+        createIcons(orbitContainerRadius).map((icon, index) => {
           return (
             <OrbitIcon
               key={index}
               iconRadius={icon.iconRadius}
               iconCornerY={icon.iconCornerY}
               iconCornerX={icon.iconCornerX}
+              iconComponent={icon.iconComponent}
             />
           );
         })}

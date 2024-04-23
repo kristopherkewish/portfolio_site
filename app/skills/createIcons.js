@@ -1,5 +1,25 @@
-const createIcons = (orbitContainerRadius, numIcons) => {
+import GithubIcon from "./_icons/GithubIcon";
+import JSIcon from "./_icons/JSIcon";
+import NextIcon from "./_icons/NextIcon";
+import NodeJSIcon from "./_icons/NodeJSIcon";
+import PostgresIcon from "./_icons/PostgresIcon";
+import ReactIcon from "./_icons/ReactIcon";
+import TailwindIcon from "./_icons/TailwindIcon";
+
+const createIcons = (orbitContainerRadius) => {
   const orbitIcons = [];
+
+  const iconComponents = [
+    GithubIcon,
+    JSIcon,
+    NextIcon,
+    NodeJSIcon,
+    PostgresIcon,
+    ReactIcon,
+    TailwindIcon
+  ];
+
+  const numIcons = iconComponents.length;
 
   const orbitContainerCenterX = orbitContainerRadius;
   const orbitContainerCenterY = orbitContainerRadius;
@@ -20,6 +40,7 @@ const createIcons = (orbitContainerRadius, numIcons) => {
       iconRadius,
       iconCornerY,
       iconCornerX,
+      iconComponent: iconComponents[i]
     };
 
     orbitIcons.push(icon);
