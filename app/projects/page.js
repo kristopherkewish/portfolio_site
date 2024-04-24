@@ -20,12 +20,13 @@ export default function Projects() {
   ];
 
   return (
-    <div className="relative flex min-h-screen	w-screen flex-col items-center justify-center bg-slate-600 text-white">
-      <div className="mb-10 text-6xl font-extrabold">PROJECTS</div>
+    <div className="relative flex min-h-screen	w-screen flex-col items-center justify-center bg-sky-300 text-white">
+      <div className="mb-10 text-8xl font-extrabold">PROJECTS</div>
       <div className="flex w-screen flex-row flex-wrap justify-evenly">
         {projects.map((project, index) => (
           <Card
             key={index}
+            order={index}
             title={project.title}
             description={project.description}
           />
