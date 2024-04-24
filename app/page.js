@@ -1,8 +1,8 @@
-import TypedText from './TypedText.js';
+import TypedText from "./TypedText.js";
 
 export default function Home() {
   return (
-    <div class="relative flex bg-green-600	text-white h-screen w-screen flex-col items-center justify-center">
+    <div class="relative flex h-screen	w-screen flex-col items-center justify-center bg-green-600 text-white">
       <div class="text-6xl">Full Stack Developer</div>
       <div class="text-[10rem] font-extrabold">KRIS KEWISH</div>
       <TypedText />

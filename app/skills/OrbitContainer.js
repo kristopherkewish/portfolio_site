@@ -44,6 +44,7 @@ export default function OrbitContainer() {
               iconCornerY={icon.iconCornerY}
               iconCornerX={icon.iconCornerX}
               iconComponent={icon.iconComponent}
+              iconColor={icon.iconColor}
             />
           );
         })}

@@ -1,16 +1,35 @@
-export default function OrbitIcon({ iconRadius, iconCornerY, iconCornerX, iconComponent }) {
-    const IconGraphic = iconComponent;
+"use client"
+
+import { useState } from 'react';
+
+export default function OrbitIcon({
+  iconRadius,
+  iconCornerY,
+  iconCornerX,
+  iconComponent,
+  iconColor
+}) {
+  const IconGraphic = iconComponent;
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className={`absolute aspect-square rounded-full flex items-center justify-center`}
+      className={`absolute flex aspect-square items-center justify-center rounded-full`}
       style={{
         height: `${iconRadius * 2}px`,
         top: `${iconCornerY}px`,
         left: `${iconCornerX}px`,
       }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <IconGraphic style={{ animationDirection: 'reverse' }}className='object-cover h-auto w-auto fill-blue-700 animate-[spin_60s_linear_infinite]' />
+      <IconGraphic
+        style={{ 
+          animationDirection: "reverse",
+        }}
+        className="h-auto w-auto animate-[spin_60s_linear_infinite] object-cover"
+        fill={isHovered ? iconColor : '#000000'}
+      />
     </div>
   );
 }

@@ -1,23 +1,7 @@
-import GithubIcon from "./_icons/GithubIcon";
-import JSIcon from "./_icons/JSIcon";
-import NextIcon from "./_icons/NextIcon";
-import NodeJSIcon from "./_icons/NodeJSIcon";
-import PostgresIcon from "./_icons/PostgresIcon";
-import ReactIcon from "./_icons/ReactIcon";
-import TailwindIcon from "./_icons/TailwindIcon";
+import { iconComponents } from "./iconComponents.js";
 
 const createIcons = (orbitContainerRadius) => {
   const orbitIcons = [];
-
-  const iconComponents = [
-    GithubIcon,
-    JSIcon,
-    NextIcon,
-    NodeJSIcon,
-    PostgresIcon,
-    ReactIcon,
-    TailwindIcon
-  ];
 
   const numIcons = iconComponents.length;
 
@@ -40,7 +24,8 @@ const createIcons = (orbitContainerRadius) => {
       iconRadius,
       iconCornerY,
       iconCornerX,
-      iconComponent: iconComponents[i]
+      iconComponent: iconComponents[i].component,
+      iconColor: iconComponents[i].color,
     };
 
     orbitIcons.push(icon);
@@ -49,4 +34,4 @@ const createIcons = (orbitContainerRadius) => {
   return orbitIcons;
 };
 
-export { createIcons }
+export { createIcons };
