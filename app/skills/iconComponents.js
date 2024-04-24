@@ -5,6 +5,10 @@ import NodeJSIcon from "./_icons/NodeJSIcon";
 import PostgresIcon from "./_icons/PostgresIcon";
 import ReactIcon from "./_icons/ReactIcon";
 import TailwindIcon from "./_icons/TailwindIcon";
+import BootstrapIcon from "./_icons/BootstrapIcon";
+import CssIcon from "./_icons/CssIcon";
+import HtmlIcon from "./_icons/htmlIcon";
+import PostmanIcon from "./_icons/PostmanIcon";
 
 const iconComponents = [
   {
@@ -35,6 +39,22 @@ const iconComponents = [
     component: TailwindIcon,
     color: "#06B6D4",
   },
+  {
+    component: BootstrapIcon,
+    color: "#7952B3",
+  },
+  {
+    component: CssIcon,
+    color: "#1572B6",
+  },
+  {
+    component: HtmlIcon,
+    color: "#E34F26",
+  },
+  {
+    component: PostmanIcon,
+    color: "#FF6C37"
+  }
 ];
 
 export { iconComponents };
