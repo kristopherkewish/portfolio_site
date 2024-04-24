@@ -1,4 +1,5 @@
 import TypedText from "./TypedText.js";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -6,7 +7,7 @@ export default function Home() {
       <div class="text-6xl">Full Stack Developer</div>
       <div class="text-[10rem] font-extrabold">KRIS KEWISH</div>
       <TypedText />
-      <div class="absolute left-8 top-8 text-xl">Skills</div>
+      <Link href="/skills"><div class="absolute left-8 top-8 text-xl">Skills</div></Link>
       <div class="absolute right-8 top-8 text-xl">Experience</div>
       <div class="absolute bottom-8  left-8 text-xl">Projects</div>
       <div class="absolute bottom-8 right-8 text-xl">Contact</div>
