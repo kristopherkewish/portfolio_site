@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
-export default function Card({ order, title, description, image }) {
+export default function Card({ order, title, description, image, link }) {
   const [animate, setAnimate] = useState(false);
   const pathname = usePathname();
 
@@ -26,8 +26,14 @@ export default function Card({ order, title, description, image }) {
         transitionDelay: `${transitionDelay}ms`,
       }}
     >
-      <div className="mb-3 drop-shadow-lg flex items-center justify-center overflow-hidden rounded-md bg-slate-900 text-white">
-        <Image className="object-cover w-full h-full" src={image} alt="Astro Weather Screenshot" />
+      <div className="mb-3 flex items-center justify-center overflow-hidden rounded-md bg-slate-900 text-white drop-shadow-lg">
+        <a href={link} target="_blank">
+          <Image
+            className="h-full w-full object-cover"
+            src={image}
+            alt={`${title} screenshot`}
+          />
+        </a>
       </div>
       <div className="flex h-44 flex-col rounded-md text-black">
         <div className="mb-3 text-xl font-bold">{title}</div>
