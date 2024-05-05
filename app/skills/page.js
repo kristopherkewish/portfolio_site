@@ -2,7 +2,7 @@ import OrbitContainer from "./OrbitContainer.js";
 
 export default function Skills() {
   return (
-    <div className="flex h-screen items-center justify-center overflow-hidden bg-blue-900 text-white">
+    <div className="relative flex h-screen items-center justify-center overflow-hidden bg-blue-900 text-white">
       <div className="absolute left-16 top-20 font-bold text-2xl">
         LANGUAGES:
         <ul className="text-l font-mono font-normal">
