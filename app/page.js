@@ -10,7 +10,7 @@ export default function Home() {
       <Link href="/skills"><div class="absolute left-8 top-8 text-xl">Skills</div></Link>
       <Link href="/experience"><div class="absolute right-8 top-8 text-xl">Experience</div></Link>
       <Link href="/projects"><div class="absolute bottom-8  left-8 text-xl">Projects</div></Link>
-      <div class="absolute bottom-8 right-8 text-xl">Contact</div>
+      <Link href="/contact"><div class="absolute bottom-8 right-8 text-xl">Contact</div></Link>
     </div>
   );
 }
