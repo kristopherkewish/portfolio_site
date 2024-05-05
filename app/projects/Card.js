@@ -35,7 +35,7 @@ export default function Card({ order, title, description, image, link }) {
           />
         </a>
       </div>
-      <div className="flex h-44 flex-col rounded-md text-black">
+      <div className="flex h-44 flex-col rounded-md">
         <div className="mb-3 text-xl font-bold">{title}</div>
         <div className="text-base">{description}</div>
       </div>

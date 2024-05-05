@@ -1,7 +1,7 @@
 export default function TimelineInfo({ role }) {
   return (
     <div className="mb-10 flex h-1/3 w-1/2 flex-col justify-center overflow-hidden rounded-lg drop-shadow-lg">
-      <div className="rounded-t-lg bg-emerald-900 p-3 text-white">
+      <div className="rounded-t-lg bg-gray-900 p-3 text-white">
         <div className="font-xl font-bold">{role.title}</div>
         <div className="font-l italic">{role.company}</div>
       </div>
