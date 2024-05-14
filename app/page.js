@@ -1,8 +1,8 @@
-import Landing from "./Landing.js";
-import Skills from "./skills/page.js";
-import Projects from "./projects/page.js";
-import Experience from "./experience/page.js";
-import Contact from "./contact/page.js";
+import Landing from "./_sections/_landing/Landing.js";
+import Skills from "./_sections/_skills/page.js";
+import Projects from "./_sections/_projects/page.js";
+import Experience from "./_sections/_experience/page.js";
+import Contact from "./_sections/_contact/page.js";
 
 export default function Home() {
   return (

@@ -1,6 +1,6 @@
-import astroWeather from "../../public/Astro_Weather.png";
-import postIt from "../../public/Post_It.png";
-import portfolioSite from "../../public/Portfolio_Site.png";
+import astroWeather from "../../../public/Astro_Weather.png";
+import postIt from "../../../public/Post_It.png";
+import portfolioSite from "../../../public/Portfolio_Site.png";
 
 const projects = [
   {
