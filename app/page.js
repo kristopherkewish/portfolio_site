@@ -6,13 +6,12 @@ import Contact from "./contact/page.js";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Landing />
       <Skills />
       <Projects />
       <Experience />
       <Contact />
-    </>
-    
+    </div>
   );
 }
