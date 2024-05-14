@@ -7,16 +7,16 @@ export default function Landing() {
       <div class="text-6xl">Full Stack Developer</div>
       <div class="text-[10rem] font-extrabold">KRIS KEWISH</div>
       <TypedText />
-      <Link href="/skills">
+      <Link href="#skills">
         <div class="absolute left-8 top-8 text-xl">Skills</div>
       </Link>
-      <Link href="/experience">
+      <Link href="#experience">
         <div class="absolute right-8 top-8 text-xl">Experience</div>
       </Link>
-      <Link href="/projects">
+      <Link href="#projects">
         <div class="absolute bottom-8  left-8 text-xl">Projects</div>
       </Link>
-      <Link href="/contact">
+      <Link href="#contact">
         <div class="absolute bottom-8 right-8 text-xl">Contact</div>
       </Link>
     </div>
