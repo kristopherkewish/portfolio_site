@@ -53,8 +53,8 @@ const iconComponents = [
   },
   {
     component: PostmanIcon,
-    color: "#FF6C37"
-  }
+    color: "#FF6C37",
+  },
 ];
 
 export { iconComponents };

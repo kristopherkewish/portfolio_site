@@ -5,11 +5,11 @@ import TimelineInfo from "./TimelineInfo.js";
 import TimelineHoverButtons from "./TimelineHoverButtons.js";
 
 export default function Timeline() {
-    const initialState = {
-        title: "Hover over a year for more info",
-        company: " ",
-        descriptionPoints: [" "],
-      }
+  const initialState = {
+    title: "Hover over a year for more info",
+    company: " ",
+    descriptionPoints: [" "],
+  };
 
   const [selectedRole, setSelectedRole] = useState(initialState);
 

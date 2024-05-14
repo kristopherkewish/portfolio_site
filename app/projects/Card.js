@@ -26,7 +26,7 @@ export default function Card({ order, title, description, image, link }) {
         transitionDelay: `${transitionDelay}ms`,
       }}
     >
-      <div className="mb-3 flex hover:rotate-6 transition items-center justify-center overflow-hidden rounded-md bg-slate-900 text-white drop-shadow-lg">
+      <div className="mb-3 flex items-center justify-center overflow-hidden rounded-md bg-slate-900 text-white drop-shadow-lg transition hover:rotate-6">
         <a href={link} target="_blank">
           <Image
             className="h-full w-full object-cover"

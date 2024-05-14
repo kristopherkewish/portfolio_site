@@ -2,7 +2,7 @@ import { roles } from "./roles.js";
 
 export default function TimelineHoverButtons({ handleHover }) {
   return (
-    <div className="flex h-24 w-5/6 bg-white drop-shadow-xl rounded-md overflow-hidden">
+    <div className="flex h-24 w-5/6 overflow-hidden rounded-md bg-white drop-shadow-xl">
       <div
         onMouseEnter={() => handleHover(roles.monash)}
         className="flex h-full w-1/2 items-center bg-emerald-400 p-5 text-lg font-bold text-white hover:cursor-pointer hover:bg-emerald-100 hover:text-black"

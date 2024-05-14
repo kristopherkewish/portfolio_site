@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function OrbitIcon({
   iconRadius,
   iconCornerY,
   iconCornerX,
   iconComponent,
-  iconColor
+  iconColor,
 }) {
   const IconGraphic = iconComponent;
   const [isHovered, setIsHovered] = useState(false);
@@ -24,11 +24,11 @@ export default function OrbitIcon({
       onMouseLeave={() => setIsHovered(false)}
     >
       <IconGraphic
-        style={{ 
+        style={{
           animationDirection: "reverse",
         }}
         className="h-auto w-auto animate-[spin_60s_linear_infinite] object-cover"
-        fill={isHovered ? iconColor : '#FFFFFF'}
+        fill={isHovered ? iconColor : "#FFFFFF"}
       />
     </div>
   );

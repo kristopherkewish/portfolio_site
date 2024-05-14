@@ -45,4 +45,4 @@ const roles = {
   },
 };
 
-export { roles }
+export { roles };
