@@ -3,18 +3,39 @@
 import { useEffect, useState } from "react";
 
 export default function ScrollContainer({ children }) {
-  const [verticalScroll, setVerticalScroll] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  const sections = ["landing", "skills", "projects", "experience", "contact"];
+  let currentSectionIndex = 0;
 
   useEffect(() => {
-    const handleScroll = () => setVerticalScroll(window.scrollY);
+    const handleWheel = (event) => {
+      if (event.deltaY >= 100) {
+        console.log("The current section is: ", sections[currentSectionIndex]);
+
+        if (event.deltaY > 0) {
+          console.log('scrolled down!');
+          if(currentSectionIndex < sections.length-1) {
+            currentSectionIndex++;
+          }
+        } else {
+          console.log('scrolled up!');
+          if(currentSectionIndex > 0) {
+            currentSectionIndex--;
+          }
+        }
+
+        console.log("The next section is: ", sections[currentSectionIndex]);
+      }
+    };
+
     const handleResize = () => setWindowHeight(window.innerHeight);
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("wheel", handleWheel);
     window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleWheel);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
