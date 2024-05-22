@@ -1,4 +1,4 @@
-import ScrollContainer from "./ScrollContainer.js";
+import ScrollContainer from "./_scrollAnimation/ScrollContainer.js";
 
 import Skills from "./_sections/_skills/page.js";
 import Projects from "./_sections/_projects/page.js";
