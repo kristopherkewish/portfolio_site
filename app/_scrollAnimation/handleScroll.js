@@ -1,14 +1,13 @@
 import _ from "lodash";
 
 export function handleScroll(setCurrentSection, totalSectionNumber) {
-    return _.debounce(undebouncedScrollHandler(setCurrentSection, totalSectionNumber), 200); // Debouncing ensures scroll handler only fires once per wheel event
+    return _.debounce(undebouncedScrollHandler(setCurrentSection, totalSectionNumber), 200, { leading: true, trailing: false }); // Debouncing ensures scroll handler only fires once per wheel event
 }
 
 function undebouncedScrollHandler(setCurrentSection, totalSectionNumber) {
   return (event) => {
     const scrollDirection = getScrollDirection(event);
     changeSection(scrollDirection, setCurrentSection, totalSectionNumber);
-    logScroll(scrollDirection);
   }
 }
 
@@ -34,7 +33,8 @@ function changeSection(scrollDirection, setCurrentSection, totalSectionNumber) {
 
 function nextSection(setCurrentSection, totalSectionNumber) {
     setCurrentSection(prevSection => {
-        if(prevSection >= totalSectionNumber - 1) {
+        const isLastSection = prevSection >= totalSectionNumber - 1;
+        if(isLastSection) {
             return prevSection;
         }
 
@@ -44,7 +44,8 @@ function nextSection(setCurrentSection, totalSectionNumber) {
 
 function previousSection(setCurrentSection) {
     setCurrentSection(prevSection => {
-        if(prevSection <= 0) {
+        const isFirstSection = prevSection <= 0;
+        if(isFirstSection) {
             return prevSection;
         }
 
