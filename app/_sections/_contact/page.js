@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      class="relative flex h-screen flex-col items-center justify-center overflow-hidden bg-slate-800 text-white"
+      class="absolute flex w-screen h-screen flex-col items-center justify-center overflow-hidden bg-slate-800 text-white"
     >
       <div className="mb-10 text-8xl font-extrabold">CONTACT</div>
       <div className="mb-10 text-2xl">

@@ -6,41 +6,13 @@ import Skills from "../_sections/_skills/page.js";
 import Projects from "../_sections/_projects/page.js";
 import Experience from "../_sections/_experience/page.js";
 import Contact from "../_sections/_contact/page.js";
+import { showCurrentSection } from "./showCurrentSection.js";
 
 export default function SectionAnimator({ currentSection }) {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [divVerticalTranslates, setDivVerticalTranslates] = useState([
     0, 0, 0, 0, 0,
   ]);
-
-  const showCurrentSection = () => {
-    const x = windowHeight;
-
-    if (currentSection === "landing") {
-      setDivVerticalTranslates([0, 0, 0, 0, 0]);
-      return;
-    }
-
-    if (currentSection === "skills") {
-      setDivVerticalTranslates([x, 0, 0, 0, 0]);
-      return;
-    }
-
-    if (currentSection === "projects") {
-      setDivVerticalTranslates([x, x, 0, 0, 0]);
-      return;
-    }
-
-    if (currentSection === "experience") {
-      setDivVerticalTranslates([x, x, x, 0, 0]);
-      return;
-    }
-
-    if (currentSection === "contact") {
-      setDivVerticalTranslates([x, x, x, x, 0]);
-      return;
-    }
-  };
 
   useEffect(() => {
     const handleResize = () => setWindowHeight(window.innerHeight);
@@ -52,24 +24,39 @@ export default function SectionAnimator({ currentSection }) {
   }, []);
 
   useEffect(() => {
-    showCurrentSection();
-  }, [currentSection])
+    showCurrentSection(currentSection, windowHeight, setDivVerticalTranslates);
+  }, [currentSection]);
 
   return (
     <>
-      <div>
+      <div className="absolute z-50" style={{
+        transition: 'transform 1s',
+        transform: `translateY(${-1*divVerticalTranslates[0]}px)`
+      }}>
         <Landing />
       </div>
-      <div>
+      <div className="absolute z-40 transition" style={{
+        transition: 'transform 1s',
+        transform: `translateY(${-1*divVerticalTranslates[1]}px)`
+      }}>
         <Skills />
       </div>
-      <div>
+      <div className="absolute z-30 transition" style={{
+        transition: 'transform 1s',
+        transform: `translateY(${-1*divVerticalTranslates[2]}px)`
+      }}>
         <Projects />
       </div>
-      <div>
+      <div className="absolute z-20 transition" style={{
+        transition: 'transform 1s',
+        transform: `translateY(${-1*divVerticalTranslates[3]}px)`
+      }}>
         <Experience />
       </div>
-      <div>
+      <div className="absolute z-10 transition" style={{
+        transition: 'transform 1s',
+        transform: `translateY(${-1*divVerticalTranslates[4]}px)`
+      }}>
         <Contact />
       </div>
     </>

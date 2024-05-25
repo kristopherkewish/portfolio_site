@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Landing() {
   return (
-    <div class="relative flex h-screen flex-col items-center justify-center overflow-hidden bg-green-600 text-white">
+    <div class="absolute flex w-screen h-screen flex-col items-center justify-center overflow-hidden bg-green-600 text-white">
       <div class="text-6xl">Full Stack Developer</div>
       <div class="text-[10rem] font-extrabold">KRIS KEWISH</div>
       <TypedText />
