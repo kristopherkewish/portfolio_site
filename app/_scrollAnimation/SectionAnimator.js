@@ -29,34 +29,49 @@ export default function SectionAnimator({ currentSection, setSection }) {
 
   return (
     <>
-      <div className="absolute z-50" style={{
-        transition: 'transform 1s',
-        transform: `translateY(${-1*divVerticalTranslates[0]}px)`
-      }}>
+      <div
+        className="absolute z-50"
+        style={{
+          transition: "transform 1s",
+          transform: `translateY(${-1 * divVerticalTranslates[0]}px)`,
+        }}
+      >
         <Landing setSection={setSection} />
       </div>
-      <div className="absolute z-40 transition" style={{
-        transition: 'transform 1s',
-        transform: `translateY(${-1*divVerticalTranslates[1]}px)`
-      }}>
+      <div
+        className="absolute z-40 transition"
+        style={{
+          transition: "transform 1s",
+          transform: `translateY(${-1 * divVerticalTranslates[1]}px)`,
+        }}
+      >
         <Skills />
       </div>
-      <div className="absolute z-30 transition" style={{
-        transition: 'transform 1s',
-        transform: `translateY(${-1*divVerticalTranslates[2]}px)`
-      }}>
+      <div
+        className="absolute z-30 transition"
+        style={{
+          transition: "transform 1s",
+          transform: `translateY(${-1 * divVerticalTranslates[2]}px)`,
+        }}
+      >
         <Projects />
       </div>
-      <div className="absolute z-20 transition" style={{
-        transition: 'transform 1s',
-        transform: `translateY(${-1*divVerticalTranslates[3]}px)`
-      }}>
+      <div
+        className="absolute z-20 transition"
+        style={{
+          transition: "transform 1s",
+          transform: `translateY(${-1 * divVerticalTranslates[3]}px)`,
+        }}
+      >
         <Experience />
       </div>
-      <div className="absolute z-10 transition" style={{
-        transition: 'transform 1s',
-        transform: `translateY(${-1*divVerticalTranslates[4]}px)`
-      }}>
+      <div
+        className="absolute z-10 transition"
+        style={{
+          transition: "transform 1s",
+          transform: `translateY(${-1 * divVerticalTranslates[4]}px)`,
+        }}
+      >
         <Contact />
       </div>
     </>
