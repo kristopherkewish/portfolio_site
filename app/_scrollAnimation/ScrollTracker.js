@@ -19,5 +19,5 @@ export default function ScrollTracker() {
     };
   }, []);
 
-  return <SectionAnimator currentSection={sections[currentSection]} />
+  return <SectionAnimator currentSection={sections[currentSection]} setSection={setCurrentSection}/>
 }

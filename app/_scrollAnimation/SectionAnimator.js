@@ -8,7 +8,7 @@ import Experience from "../_sections/_experience/page.js";
 import Contact from "../_sections/_contact/page.js";
 import { showCurrentSection } from "./showCurrentSection.js";
 
-export default function SectionAnimator({ currentSection }) {
+export default function SectionAnimator({ currentSection, setSection }) {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [divVerticalTranslates, setDivVerticalTranslates] = useState([
     0, 0, 0, 0, 0,
@@ -33,7 +33,7 @@ export default function SectionAnimator({ currentSection }) {
         transition: 'transform 1s',
         transform: `translateY(${-1*divVerticalTranslates[0]}px)`
       }}>
-        <Landing />
+        <Landing setSection={setSection} />
       </div>
       <div className="absolute z-40 transition" style={{
         transition: 'transform 1s',
