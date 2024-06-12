@@ -9,8 +9,7 @@ export default function Projects() {
       className="absolute flex h-screen w-screen flex-col items-center justify-center overflow-scroll bg-orange-900 text-white"
     >
       <div className="mb-10 text-8xl font-extrabold">PROJECTS</div>
-        {
-        /*projects.map((project, index) => (
+      {/*projects.map((project, index) => (
           <Card
             key={index}
             order={index}
@@ -20,8 +19,7 @@ export default function Projects() {
             link={project.link}
           />
         ))
-      */
-      }
+      */}
       <EmblaCarousel />
     </div>
   );
