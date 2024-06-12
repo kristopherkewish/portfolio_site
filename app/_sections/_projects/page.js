@@ -1,4 +1,5 @@
 import Card from "./Card.js";
+import { EmblaCarousel } from "./EmblaCarousel.js";
 import { projects } from "./projects.js";
 
 export default function Projects() {
@@ -8,8 +9,8 @@ export default function Projects() {
       className="absolute flex h-screen w-screen flex-col items-center justify-center overflow-scroll bg-orange-900 text-white"
     >
       <div className="mb-10 text-8xl font-extrabold">PROJECTS</div>
-      <div className="flex w-screen flex-row flex-wrap justify-evenly">
-        {projects.map((project, index) => (
+        {
+        /*projects.map((project, index) => (
           <Card
             key={index}
             order={index}
@@ -18,8 +19,10 @@ export default function Projects() {
             image={project.image}
             link={project.link}
           />
-        ))}
-      </div>
+        ))
+      */
+      }
+      <EmblaCarousel />
     </div>
   );
 }
