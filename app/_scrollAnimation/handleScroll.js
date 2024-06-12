@@ -3,13 +3,14 @@ import _ from "lodash";
 export function handleScroll(setCurrentSection, totalSectionNumber) {
   return _.debounce(
     undebouncedScrollHandler(setCurrentSection, totalSectionNumber),
-    200,
+    50,
     { leading: true, trailing: false },
   ); // Debouncing ensures scroll handler only fires once per wheel event
 }
 
 function undebouncedScrollHandler(setCurrentSection, totalSectionNumber) {
   return (event) => {
+    // const isLargeScroll = ;
     const scrollDirection = getScrollDirection(event);
     changeSection(scrollDirection, setCurrentSection, totalSectionNumber);
   };
