@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="absolute flex h-screen w-screen items-center justify-center overflow-hidden bg-blue-900 text-white"
+      className="absolute flex h-dvh w-screen items-center justify-center overflow-hidden bg-blue-900 text-white"
     >
       <div className="absolute left-16 top-20 text-2xl font-bold">
         LANGUAGES:
