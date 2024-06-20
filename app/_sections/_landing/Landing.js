@@ -7,19 +7,19 @@ export default function Landing({ setSection }) {
       <div class="text-[5rem] lg:text-[10rem] font-extrabold">KRIS KEWISH</div>
       <TypedText />
       <div
-        class="hidden block absolute left-8 top-8 text-xl hover:cursor-pointer"
+        class="hidden lg:block absolute left-8 top-8 text-xl hover:cursor-pointer"
         onClick={() => setSection(1)}
       >
         Skills
       </div>
       <div
-        class="hidden lg:block absolute right-8 top-8 text-xl hover:cursor-pointer"
+        class="lg:block absolute right-8 top-8 text-xl hover:cursor-pointer"
         onClick={() => setSection(3)}
       >
         Experience
       </div>
       <div
-        class="lg:block absolute bottom-8  left-8 text-xl hover:cursor-pointer"
+        class="hidden lg:block absolute bottom-8  left-8 text-xl hover:cursor-pointer"
         onClick={() => setSection(2)}
       >
         Projects

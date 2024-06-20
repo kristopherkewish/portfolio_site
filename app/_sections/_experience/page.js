@@ -6,7 +6,7 @@ export default function Experience() {
       id="experience"
       class="absolute flex h-dvh w-screen flex-col items-center justify-center overflow-hidden bg-emerald-900 text-white"
     >
-      <div className="mb-10 text-8xl font-extrabold">EXPERIENCE</div>
+      <div className="mb-10 text-5xl lg:text-8xl font-extrabold">EXPERIENCE</div>
       <Timeline />
     </div>
   );
