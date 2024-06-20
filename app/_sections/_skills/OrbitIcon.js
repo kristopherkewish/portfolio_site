@@ -27,7 +27,7 @@ export default function OrbitIcon({
         style={{
           animationDirection: "reverse",
         }}
-        className="h-auto w-auto animate-[spin_60s_linear_infinite] object-cover"
+        className="h-full w-full animate-[spin_60s_linear_infinite] object-cover"
         fill={isHovered ? iconColor : "#FFFFFF"}
       />
     </div>

@@ -6,7 +6,9 @@ export default function Skills() {
       id="skills"
       className="absolute flex h-dvh w-screen items-center justify-center overflow-hidden bg-blue-900 text-white"
     >
-      <div className="absolute left-16 top-20 text-2xl font-bold">
+      {
+        /*
+        <div className="absolute left-16 top-20 text-2xl font-bold">
         LANGUAGES:
         <ul className="text-l font-mono font-normal">
           <li>Javascript</li>
@@ -32,8 +34,11 @@ export default function Skills() {
           <li>Github</li>
         </ul>
       </div>
+        */
+      }
+      
       <OrbitContainer />
-      <div className="absolute text-6xl font-extrabold">SKILLS</div>
+      {/* <div className="absolute text-6xl font-extrabold">SKILLS</div> */}
     </div>
   );
 }

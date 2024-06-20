@@ -7,7 +7,7 @@ import ReactIcon from "./_icons/ReactIcon";
 import TailwindIcon from "./_icons/TailwindIcon";
 import BootstrapIcon from "./_icons/BootstrapIcon";
 import CssIcon from "./_icons/CssIcon";
-import HtmlIcon from "./_icons/htmlIcon";
+import HtmlIcon from "./_icons/HtmlIcon";
 import PostmanIcon from "./_icons/PostmanIcon";
 
 const iconComponents = [
