@@ -13,7 +13,7 @@ export default function EmblaSlide({ link, imgSrc, title, description}) {
               alt={title}
             />
           </a>
-          <div className="absolute bottom-0 w-full bg-white/90 p-5">
+          <div className="hidden lg:block absolute bottom-0 w-full bg-white/90 p-5">
             <div className="font-bold">{title}</div>
             <div>{description}</div>
           </div>

@@ -17,7 +17,7 @@ export function EmblaCarousel() {
 
   return (
     <div
-      className="embla relative w-3/4 overflow-hidden rounded-xl bg-white text-center text-black"
+      className="embla relative w-full lg:w-3/4 overflow-hidden rounded-xl bg-white text-center text-black"
       ref={emblaRef}
     >
       <div className="embla__container flex">
@@ -33,11 +33,11 @@ export function EmblaCarousel() {
         })}
       </div>
       <button
-        className="embla__prev absolute left-3 top-1/2 h-5 w-5 rounded-full bg-gray-300 drop-shadow-md hover:bg-black"
+        className="hidden lg:block embla__prev absolute left-3 top-1/2 h-5 w-5 rounded-full bg-gray-300 drop-shadow-md hover:bg-black"
         onClick={scrollPrev}
       ></button>
       <button
-        className="embla__next absolute right-3 top-1/2 h-5 w-5 rounded-full bg-gray-300 drop-shadow-md hover:bg-black"
+        className="hidden lg:block embla__next absolute right-3 top-1/2 h-5 w-5 rounded-full bg-gray-300 drop-shadow-md hover:bg-black"
         onClick={scrollNext}
       ></button>
     </div>

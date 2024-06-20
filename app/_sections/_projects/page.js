@@ -6,7 +6,7 @@ export default function Projects() {
       id="projects"
       className="absolute flex h-dvh w-screen flex-col items-center justify-center overflow-scroll bg-orange-900 text-white"
     >
-      <div className="mb-10 text-8xl font-extrabold">PROJECTS</div>
+      <div className="mb-10 text-5xl lg:text-8xl font-extrabold">PROJECTS</div>
       <EmblaCarousel />
     </div>
   );
