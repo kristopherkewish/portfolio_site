@@ -13,7 +13,7 @@ export default function Landing({ setSection }) {
         Skills
       </div>
       <div
-        class="lg:block absolute right-8 top-8 text-xl hover:cursor-pointer"
+        class="hidden lg:block absolute right-8 top-8 text-xl hover:cursor-pointer"
         onClick={() => setSection(3)}
       >
         Experience
@@ -25,7 +25,7 @@ export default function Landing({ setSection }) {
         Projects
       </div>
       <div
-        class="hidden lg:block absolute bottom-8 right-8 text-xl hover:cursor-pointer"
+        class="lg:block absolute bottom-8 right-8 text-xl hover:cursor-pointer"
         onClick={() => setSection(4)}
       >
         Contact
