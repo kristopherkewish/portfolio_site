@@ -10,7 +10,6 @@ export function handleScroll(setCurrentSection, totalSectionNumber) {
 
 function undebouncedScrollHandler(setCurrentSection, totalSectionNumber) {
   return (event) => {
-    // const isLargeScroll = ;
     const scrollDirection = getScrollDirection(event);
     changeSection(scrollDirection, setCurrentSection, totalSectionNumber);
   };
@@ -36,7 +35,7 @@ function changeSection(scrollDirection, setCurrentSection, totalSectionNumber) {
   }
 }
 
-function nextSection(setCurrentSection, totalSectionNumber) {
+export function nextSection(setCurrentSection, totalSectionNumber) {
   setCurrentSection((prevSection) => {
     const isLastSection = prevSection >= totalSectionNumber - 1;
     if (isLastSection) {
@@ -47,7 +46,7 @@ function nextSection(setCurrentSection, totalSectionNumber) {
   });
 }
 
-function previousSection(setCurrentSection) {
+export function previousSection(setCurrentSection) {
   setCurrentSection((prevSection) => {
     const isFirstSection = prevSection <= 0;
     if (isFirstSection) {
