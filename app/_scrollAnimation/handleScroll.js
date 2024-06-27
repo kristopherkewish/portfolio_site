@@ -1,5 +1,39 @@
 import _ from "lodash";
 
+// MOBILE SWIPE HANDLING - START
+let touchStartY = 0;
+
+export function handleTouchStart(event) {
+  touchStartY = event.touches[0].clientY;
+}
+
+export function handleTouchEnd(setCurrentSection, totalSectionNumber) {
+  return _.debounce(
+    undebouncedTouchEndHandler(setCurrentSection, totalSectionNumber),
+    200,
+    { leading: true, trailing: false },
+  );
+}
+
+function undebouncedTouchEndHandler(setCurrentSection, totalSectionNumber) {
+  return (event) => {
+    const touchEndY = event.changedTouches[0].clientY;
+    const deltaY = touchStartY - touchEndY;
+    const threshold = 50; // Prevents accidentally swiping, or swiping vertically on horizontal swipes
+
+    if (Math.abs(deltaY) < threshold) {
+      return;
+    }
+
+    if (deltaY > 0) {
+      nextSection(setCurrentSection, totalSectionNumber);
+    } else if (deltaY < 0) {
+      previousSection(setCurrentSection);
+    }
+  };
+}
+// MOBILE SWIPE HANDLING - END
+
 export function handleScroll(setCurrentSection, totalSectionNumber) {
   return _.debounce(
     undebouncedScrollHandler(setCurrentSection, totalSectionNumber),
@@ -35,7 +69,7 @@ function changeSection(scrollDirection, setCurrentSection, totalSectionNumber) {
   }
 }
 
-export function nextSection(setCurrentSection, totalSectionNumber) {
+function nextSection(setCurrentSection, totalSectionNumber) {
   setCurrentSection((prevSection) => {
     const isLastSection = prevSection >= totalSectionNumber - 1;
     if (isLastSection) {
@@ -46,7 +80,7 @@ export function nextSection(setCurrentSection, totalSectionNumber) {
   });
 }
 
-export function previousSection(setCurrentSection) {
+function previousSection(setCurrentSection) {
   setCurrentSection((prevSection) => {
     const isFirstSection = prevSection <= 0;
     if (isFirstSection) {
