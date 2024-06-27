@@ -33,6 +33,12 @@ export default function ScrollTracker() {
       (event) => {
         const touchEndY = event.changedTouches[0].clientY;
         const deltaY = touchStartY - touchEndY;
+        const threshold = 50;
+
+        if(Math.abs(deltaY) < threshold) {
+          return;
+        }
+
         if (deltaY > 0) {
           console.log("Scrolled to next section");
           nextSection(setCurrentSection, sections.length);
