@@ -21,9 +21,10 @@ export function EmblaCarousel() {
       ref={emblaRef}
     >
       <div className="embla__container flex">
-        {projects.map((project) => {
+        {projects.map((project, index) => {
           return (
             <EmblaSlide
+              key={index}
               link={project.link}
               imgSrc={project.image}
               title={project.title}

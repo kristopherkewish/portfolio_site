@@ -9,12 +9,13 @@ import Contact from "../_sections/_contact/page.js";
 import { showCurrentSection } from "./showCurrentSection.js";
 
 export default function SectionAnimator({ currentSection, setSection }) {
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [windowHeight, setWindowHeight] = useState(0);
   const [divVerticalTranslates, setDivVerticalTranslates] = useState([
     0, 0, 0, 0, 0,
   ]);
 
   useEffect(() => {
+    setWindowHeight(window.innerHeight);
     const handleResize = () => setWindowHeight(window.innerHeight);
     window.addEventListener("resize", handleResize);
 

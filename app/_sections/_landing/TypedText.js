@@ -31,8 +31,8 @@ export default function TypedText() {
   }, []);
 
   return (
-    <div class="mt-10 inline">
-      <span id="typed-text" class="font-mono text-6xl"></span>
+    <div className="mt-10 inline">
+      <span id="typed-text" className="font-mono text-6xl"></span>
     </div>
   );
 }
