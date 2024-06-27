@@ -33,17 +33,15 @@ export default function ScrollTracker() {
       (event) => {
         const touchEndY = event.changedTouches[0].clientY;
         const deltaY = touchStartY - touchEndY;
-        const threshold = 50;
+        const threshold = 50; // Prevents accidentally swiping, or swiping vertically on horizontal swipes
 
-        if(Math.abs(deltaY) < threshold) {
+        if (Math.abs(deltaY) < threshold) {
           return;
         }
 
         if (deltaY > 0) {
-          console.log("Scrolled to next section");
           nextSection(setCurrentSection, sections.length);
         } else if (deltaY < 0) {
-          console.log("Scrolled to previous section");
           previousSection(setCurrentSection);
         }
       },

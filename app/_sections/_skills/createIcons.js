@@ -11,7 +11,7 @@ const createIcons = (orbitContainerRadius) => {
 
   for (let i = 0; i < numIcons; i++) {
     const angle = i * angleIncrement;
-    const iconRadius = orbitContainerRadius/8;
+    const iconRadius = orbitContainerRadius / 8;
 
     const iconCenterX =
       orbitContainerCenterX + orbitContainerRadius * Math.cos(angle);

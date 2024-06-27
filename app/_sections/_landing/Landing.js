@@ -2,30 +2,30 @@ import TypedText from "./TypedText.js";
 
 export default function Landing({ setSection }) {
   return (
-    <div class="absolute flex h-dvh w-screen px-1 lg:px-0 flex-col items-start lg:items-center justify-center overflow-hidden bg-green-600 text-white">
+    <div class="absolute flex h-dvh w-screen flex-col items-start justify-center overflow-hidden bg-green-600 px-1 text-white lg:items-center lg:px-0">
       <div class="text-3xl lg:text-6xl">Full Stack Developer</div>
-      <div class="text-[5rem] lg:text-[10rem] font-extrabold">KRIS KEWISH</div>
+      <div class="text-[5rem] font-extrabold lg:text-[10rem]">KRIS KEWISH</div>
       <TypedText />
       <div
-        class="hidden lg:block absolute left-8 top-8 text-xl hover:cursor-pointer"
+        class="absolute left-8 top-8 hidden text-xl hover:cursor-pointer lg:block"
         onClick={() => setSection(1)}
       >
         Skills
       </div>
       <div
-        class="hidden lg:block absolute right-8 top-8 text-xl hover:cursor-pointer"
+        class="absolute right-8 top-8 hidden text-xl hover:cursor-pointer lg:block"
         onClick={() => setSection(3)}
       >
         Experience
       </div>
       <div
-        class="hidden lg:block absolute bottom-8  left-8 text-xl hover:cursor-pointer"
+        class="absolute bottom-8 left-8 hidden  text-xl hover:cursor-pointer lg:block"
         onClick={() => setSection(2)}
       >
         Projects
       </div>
       <div
-        class="lg:block absolute bottom-8 right-8 text-xl hover:cursor-pointer"
+        class="absolute bottom-8 right-8 text-xl hover:cursor-pointer lg:block"
         onClick={() => setSection(4)}
       >
         Contact
