@@ -9,6 +9,8 @@ import BootstrapIcon from "./_icons/BootstrapIcon";
 import CssIcon from "./_icons/CssIcon";
 import HtmlIcon from "./_icons/HtmlIcon";
 import PostmanIcon from "./_icons/PostmanIcon";
+import CsharpIcon from "./_icons/CsharpIcon";
+import DotnetIcon from "./_icons/DotnetIcon";
 
 const iconComponents = [
   {
@@ -55,6 +57,14 @@ const iconComponents = [
     component: PostmanIcon,
     color: "#FF6C37",
   },
+  {
+    component: CsharpIcon,
+    color: "#68217A"
+  },
+  {
+    component: DotnetIcon,
+    color: "#68217A"
+  }
 ];
 
 export { iconComponents };
