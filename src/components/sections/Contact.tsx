@@ -33,9 +33,9 @@ export function Contact() {
       <FadeUp delay={0.15}>
         <a
           href={`mailto:${profile.email}`}
-          className="font-display group mt-12 inline-flex flex-wrap items-baseline gap-x-4 text-3xl font-semibold tracking-tight md:text-5xl"
+          className="font-display group mt-12 flex max-w-full flex-wrap items-baseline gap-x-4 text-2xl font-semibold tracking-tight sm:text-3xl md:text-5xl"
         >
-          <span className="border-b border-[var(--color-border)] pb-1 transition-colors group-hover:border-[var(--color-accent)]">
+          <span className="border-b border-[var(--color-border)] pb-1 break-all transition-colors group-hover:border-[var(--color-accent)]">
             {profile.email}
           </span>
           <span

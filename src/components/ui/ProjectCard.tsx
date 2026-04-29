@@ -17,10 +17,10 @@ export function ProjectCard({ project, reverse = false, index }: Props) {
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: reduced ? 0 : 40 }}
+      initial={{ opacity: 0, y: reduced ? 0 : 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.2, margin: "0px 0px -15% 0px" }}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
       className={`grid items-center gap-8 md:grid-cols-12 md:gap-12 ${
         reverse ? "md:[&>*:first-child]:order-2" : ""
       }`}
