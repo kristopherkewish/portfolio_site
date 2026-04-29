@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# personal notes / source material kept locally (not for VCS)
+feedback.txt
+resume.txt
