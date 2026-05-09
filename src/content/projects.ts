@@ -16,6 +16,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "timebox",
+    name: "Timebox",
+    tagline: "A day-planning web app built around the timebox method.",
+    description:
+      "A personal productivity app that lets you plan your day in concrete time blocks on a configurable timeline, with weekly and monthly planners at higher levels of abstraction. Solo full-stack build — React SPA on Cloudflare Pages, with Pages Functions, D1, and Drizzle handling auth and persistence at the edge for $0/month.",
+    stack: ["React", "TypeScript", "Vite", "Drizzle", "Cloudflare"],
+    liveUrl: "https://timebox2.pages.dev/",
+    repoUrl: "https://github.com/kristopherkewish/timebox",
+    image: "/projects/timebox.svg",
+    imageAlt: "Timebox — day-planning web app preview",
+    accent: "#8B5CF6",
+  },
+  {
     slug: "zyzz-ai",
     name: "ZyzzAI",
     tagline: "An AI personal trainer that competes with online coaches.",
