@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { FaArrowDown } from "react-icons/fa6";
 import { Typewriter } from "@/components/motion/Typewriter";
+import { DotField } from "@/components/motion/DotField";
 import { profile } from "@/content/profile";
 
 export function Hero() {
@@ -16,6 +17,15 @@ export function Hero() {
   const orbY = useTransform(scrollYProgress, [0, 1], [0, reduced ? 0 : 200]);
   const orbOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const titleY = useTransform(scrollYProgress, [0, 1], [0, reduced ? 0 : -60]);
+
+  // Split the name into words and letters for the staggered reveal.
+  const words = `${profile.name}.`.split(" ").reduce<{ text: string; offset: number }[]>(
+    (acc, text) => {
+      const prev = acc[acc.length - 1];
+      return [...acc, { text, offset: prev ? prev.offset + prev.text.length : 0 }];
+    },
+    [],
+  );
 
   return (
     <section
@@ -39,18 +49,8 @@ export function Hero() {
         />
       </motion.div>
 
-      {/* Subtle grid */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "linear-gradient(var(--color-fg) 1px, transparent 1px), linear-gradient(90deg, var(--color-fg) 1px, transparent 1px)",
-          backgroundSize: "80px 80px",
-          maskImage: "radial-gradient(circle at center, black 30%, transparent 75%)",
-          WebkitMaskImage: "radial-gradient(circle at center, black 30%, transparent 75%)",
-        }}
-      />
+      {/* Interactive dot field */}
+      <DotField className="pointer-events-none absolute inset-0 h-full w-full [mask-image:linear-gradient(to_bottom,black_70%,transparent)]" />
 
       <motion.div
         style={{ y: titleY }}
@@ -60,25 +60,48 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="font-mono text-xs tracking-[0.3em] uppercase text-[var(--color-accent)]"
+          className="flex items-center gap-3 font-mono text-xs tracking-[0.3em] uppercase text-[var(--color-accent)]"
         >
+          <span aria-hidden="true" className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--color-accent)] opacity-60" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--color-accent)]" />
+          </span>
           {profile.role} · {profile.location}
         </motion.p>
 
-        <motion.h1
+        <h1
           id="hero-title"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          aria-label={`${profile.name}.`}
           className="font-display mt-6 text-6xl font-bold tracking-tight text-balance md:text-8xl lg:text-[9rem]"
         >
-          {profile.name}.
-        </motion.h1>
+          {words.map((word, w) => (
+            <span key={w} aria-hidden="true">
+              <span className="inline-block whitespace-nowrap">
+                {Array.from(word.text).map((char, c) => (
+                  <span key={c} className="inline-block overflow-hidden pb-[0.08em] align-bottom">
+                    <motion.span
+                      initial={{ y: reduced ? 0 : "110%" }}
+                      animate={{ y: 0 }}
+                      transition={{
+                        duration: 0.9,
+                        delay: 0.15 + (word.offset + c) * 0.045,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
+                      className={`inline-block ${char === "." ? "text-[var(--color-accent)]" : ""}`}
+                    >
+                      {char}
+                    </motion.span>
+                  </span>
+                ))}
+              </span>{" "}
+            </span>
+          ))}
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mt-8 max-w-2xl text-2xl leading-relaxed text-[var(--color-fg-muted)] md:text-3xl"
         >
           I build{" "}
@@ -91,7 +114,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.95 }}
           className="mt-12 flex flex-wrap items-center gap-6"
         >
           <a

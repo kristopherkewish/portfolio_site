@@ -18,7 +18,7 @@ export function Experience() {
     <section
       id="experience"
       aria-labelledby="experience-title"
-      className="relative mx-auto w-full max-w-6xl px-6 py-32 md:px-10 md:py-40"
+      className="relative mx-auto w-full max-w-6xl scroll-mt-10 px-6 py-24 md:px-10 md:py-32"
     >
       <SectionHeading eyebrow="Experience" title="A short history." />
 
@@ -38,7 +38,7 @@ export function Experience() {
         <ol className="contents">
           {experience.map((entry, i) => (
             <li
-              key={entry.year}
+              key={entry.title}
               className="relative col-span-full grid gap-4 pb-16 last:pb-0 md:grid-cols-12 md:gap-x-12"
             >
               {/* Year */}
@@ -49,7 +49,11 @@ export function Experience() {
                     <span
                       aria-hidden="true"
                       className="absolute top-2 left-[0.6rem] block h-3 w-3 rounded-full bg-[var(--color-accent)] ring-4 ring-[var(--color-bg)] md:left-[calc(100%+0.1rem)]"
-                    />
+                    >
+                      {i === experience.length - 1 ? (
+                        <span className="absolute inset-0 animate-ping rounded-full bg-[var(--color-accent)] opacity-60" />
+                      ) : null}
+                    </span>
                     <p className="font-display text-4xl font-semibold tracking-tight text-[var(--color-fg)] md:text-5xl">
                       {entry.year}
                     </p>

@@ -18,7 +18,7 @@ export function Skills() {
     <section
       id="skills"
       aria-labelledby="skills-title"
-      className="relative mx-auto w-full max-w-6xl px-6 py-32 md:px-10 md:py-40"
+      className="relative mx-auto w-full max-w-6xl scroll-mt-10 px-6 py-24 md:px-10 md:py-32"
     >
       <div className="mb-20">
         <SectionHeading

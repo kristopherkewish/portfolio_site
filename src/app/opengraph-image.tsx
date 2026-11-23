@@ -54,7 +54,7 @@ export default function OpenGraphImage() {
               display: "flex",
             }}
           >
-            I build React apps, Node.js APIs, and full-stack tools.
+            Full-stack engineer building software that holds up.
           </div>
         </div>
 

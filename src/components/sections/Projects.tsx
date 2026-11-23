@@ -7,7 +7,7 @@ export function Projects() {
     <section
       id="projects"
       aria-labelledby="projects-title"
-      className="relative mx-auto w-full max-w-6xl px-6 py-32 md:px-10 md:py-40"
+      className="relative mx-auto w-full max-w-6xl scroll-mt-10 px-6 py-24 md:px-10 md:py-32"
     >
       <SectionHeading
         eyebrow="Projects"
@@ -15,7 +15,7 @@ export function Projects() {
         description="Side projects and explorations. The kind of small, finished thing that's more useful than a half-finished bigger thing."
       />
 
-      <div className="mt-24 flex flex-col gap-32 md:gap-40">
+      <div className="mt-24 flex flex-col gap-24 md:gap-36">
         {projects.map((project, i) => (
           <ProjectCard key={project.slug} project={project} index={i} reverse={i % 2 === 1} />
         ))}

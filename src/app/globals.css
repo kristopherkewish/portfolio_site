@@ -30,6 +30,15 @@
     scroll-behavior: smooth;
   }
 
+  /* Lenis drives scrolling while it runs; native smooth scrolling would fight it. */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  html.lenis {
+    scroll-behavior: auto;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;

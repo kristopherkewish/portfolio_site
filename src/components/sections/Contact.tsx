@@ -1,4 +1,5 @@
 import { FadeUp } from "@/components/motion/FadeUp";
+import { CopyEmail } from "@/components/ui/CopyEmail";
 import { profile } from "@/content/profile";
 
 export function Contact() {
@@ -6,8 +7,18 @@ export function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="relative mx-auto w-full max-w-6xl px-6 pt-32 pb-16 md:px-10 md:pt-48"
+      className="relative mx-auto w-full max-w-6xl px-6 pt-24 pb-16 md:px-10 md:pt-40"
     >
+      {/* Glow rising from the foot of the page */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 left-1/2 -z-10 h-[70%] w-screen -translate-x-1/2"
+        style={{
+          background:
+            "radial-gradient(60% 70% at 50% 100%, color-mix(in oklab, var(--color-accent) 13%, transparent), transparent 75%)",
+        }}
+      />
+
       <FadeUp>
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-[var(--color-accent)]">
           Get in touch
@@ -45,6 +56,9 @@ export function Contact() {
             →
           </span>
         </a>
+        <div className="mt-6">
+          <CopyEmail email={profile.email} />
+        </div>
       </FadeUp>
 
       <FadeUp delay={0.2}>
