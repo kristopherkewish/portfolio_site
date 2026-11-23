@@ -28,9 +28,15 @@ export const experience: Experience[] = [
     body: "Completed the Codecademy Full Stack Engineer Bootcamp and a dedicated .NET course. Started taking on freelance projects — building responsive UIs, structured APIs, and cloud-deployed apps for small business clients alongside personal builds.",
   },
   {
-    year: "Now",
+    year: "2024–26",
     title: "Full-stack at Interfi Systems",
-    org: "Software Engineer · Sept 2024 – present",
-    body: "Building and maintaining full-stack systems for loan management and internal analytics. Day-to-day mix of React + .NET feature work, complex SQL stored procedures, Azure-based observability tooling, and integrating with banking partners.",
+    org: "Software Engineer · Sept 2024 – June 2026",
+    body: "Built and maintained full-stack systems for loan management and internal analytics. A day-to-day mix of React + .NET feature work, complex SQL stored procedures, Azure-based observability tooling, and integrating with banking partners.",
+  },
+  {
+    year: "Now",
+    title: "Leading development at Docuscan",
+    org: "Development Lead · July 2026 – present",
+    body: "Leading the development team behind FraudX, Docuscan's document fraud detection platform for lenders. Part of the job is hands-on full-stack engineering; the rest is everything around it — setting technical direction, mentoring junior developers, and putting engineering process in place, from code review and automated checks to documentation and a predictable release rhythm. It's also where AI went from a side interest to part of the daily work.",
   },
 ];

@@ -24,9 +24,9 @@ export const profile: Profile = {
   location: "Melbourne, Australia",
   email: "kristopherkewish@gmail.com",
   phone: "0422 019 884",
-  bio: "I'm a full-stack engineer who likes building software that holds up — clean, scalable, easy to reason about months later. Day-to-day that means React and TypeScript on the front, .NET and SQL Server on the back, and Azure tying it together.",
+  bio: "I'm a full-stack engineer who likes building software that holds up — clean, scalable, easy to reason about months later. Most of that has been React and TypeScript on the front, .NET and SQL Server on the back, and Azure tying it together.",
   currently: [
-    { label: "Working on", value: "Full-stack loan servicing tooling at Interfi Systems" },
+    { label: "Working on", value: "Leading development of FraudX at Docuscan" },
     { label: "Learning", value: "AI development workflows & cloud architecture" },
   ],
   typewriter: [

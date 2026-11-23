@@ -16,6 +16,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "runlate",
+    name: "RunLate",
+    tagline: "A live Melbourne train departures board, styled after the platform screens.",
+    description:
+      "A real-time departures board built on Transport Victoria's GTFS-Realtime data, showing delays and disruptions as they happen. It runs as an installable PWA at the edge on Cloudflare Workers — and the same feed is mirrored on an ESP32-driven LED sign at home.",
+    stack: ["SvelteKit", "Cloudflare Workers", "GTFS-Realtime", "PWA", "ESP32"],
+    liveUrl: "https://runlate.kristopherkewish.workers.dev/",
+    repoUrl: "https://github.com/kristopherkewish/RunLate",
+    image: "/projects/runlate.svg",
+    imageAlt: "RunLate — live train departures board preview",
+    accent: "#F59E0B",
+  },
+  {
     slug: "timebox",
     name: "Timebox",
     tagline: "A day-planning web app built around the timebox method.",
@@ -27,6 +40,18 @@ export const projects: Project[] = [
     image: "/projects/timebox.svg",
     imageAlt: "Timebox — day-planning web app preview",
     accent: "#8B5CF6",
+  },
+  {
+    slug: "bwb-coach",
+    name: "BWB Coach",
+    tagline: "A strength-coaching PWA that keeps working offline in the gym.",
+    description:
+      "Built for a coaching business: coaches build and schedule routines, trainees log their sets from their phones — even with no signal, syncing once they're back online — and coaches review the results. Multi-tenant through Postgres row-level security, with no custom backend to run.",
+    stack: ["React", "TypeScript", "Supabase", "TanStack Query", "Playwright"],
+    context: "Freelance project",
+    image: "/projects/bwb-coach.svg",
+    imageAlt: "BWB Coach — strength-coaching PWA preview",
+    accent: "#F43F5E",
   },
   {
     slug: "zyzz-ai",
